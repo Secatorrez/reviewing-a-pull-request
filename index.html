@@ -76,8 +76,8 @@
         ucanvas = get('upcoming'),
         uctx    = ucanvas.getContext('2d'),
         speed   = { start: 0.7, decrement: 0.003, min: 0.2 }, // how long before piece drops by 1 row (seconds)
-        nx      = 12, // width of tetris court (in blocks)
-        ny      = 25, // height of tetris court (in blocks)
+        nx      = 20, // width of tetris court (in blocks)
+        ny      = 40, // height of tetris court (in blocks)
         nu      = 5;  // width/height of upcoming preview (in blocks)
 
     //-------------------------------------------------------------------------
@@ -355,7 +355,7 @@
       }
       if (n > 0) {
         addRows(n);
-        addScore(100*Math.pow(2,n-1)); // 1: 100, 2: 200, 3: 400, 4: 800
+        addScore(200*Math.pow(2,n)); // 1: 100, 2: 200, 3: 400, 4: 800
       }
     }
 
